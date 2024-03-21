@@ -117,6 +117,41 @@
 </div>
 <!-- Carousel Slider End Here -->
 
+<!-- Food Categories Section Starts Here -->
+<section class="categories">
+  <div class="container-2">
+      <h2 class="text-center">Categories</h2>
+
+      <a href="#">  
+      <div class="box-3 float-container" >
+         <img src="images/food_images/kottu_roti.jpg" alt="Kottu Roti" class="img-responsive img-curve">
+
+         <h3 class="float-text text-white">Kottu Roti</h3>
+      </div>
+      </a>
+
+      <a href="#">
+      <div class="box-3 float-container">
+          <img src="images/food_images/nasi_goreng.jpg" alt="Nasi Goreng" class="img-responsive img-curve">
+         
+         <h3 class="float-text text-white">Nasi Goreng</h3>
+      </div>
+      </a>
+
+      <a href="#">
+      <div class="box-3 float-container">
+      <img src="images/food_images/chicken_fried_rice.jpg" alt="Chicken Fried Rice" class="img-responsive img-curve">
+         
+         <h3 class="float-text text-white">Chicken Fried Rice</h3>
+      </div>
+      </a>
+
+      <div class="clearmargin">       
+      </div>
+  </div>        
+</section> 
+<!-- Food Categories Section Ends Here -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
