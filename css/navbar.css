@@ -1,0 +1,72 @@
+/* 
+    Author:Sudath Nawagamuwage;
+    Theme: Spice Ceylon Restaurant;
+    Header Section;
+*/
+.navbar {
+    position: absolute;
+    background: transparent!important; 
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);    
+}
+
+.food-search {
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    width: 80%; /* Adjusted width to 80% */
+    margin: 0 auto; /* Center the element horizontally */
+}
+.navbar-brand img{
+    width: 20%;
+    float: left;
+}
+.custom-width {
+    width: 150px;
+  }
+.nav-link{
+    color: #fff!important;
+    margin-right: 5px;
+}
+.nav-link:hover{
+    color: rgba(216,216,216)!important;
+}
+.phone, .email{
+    margin-right: 5px;
+}
+.phone{
+    color: #03a9e4;
+}
+.email{
+    color: #E91e63;
+}
+#login{
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 0.2rem 1rem!important;
+    line-height: 30PX;
+}
+#login:hover{
+    background-color: #F44336;
+    border: 2PX solid #F44336;
+}
+#signup{
+    border: 2px solid #F44336;
+    background-color: #F44336;
+    border-radius: 20px;
+    padding: 0.2rem 1rem!important;
+    line-height: 30PX;
+}
+.input-group>.form-control:focus{
+    box-shadow: none;
+}
+.input-group>.form-control{
+    margin-right:5px;
+}
+
+/* Adjust carousel image height to your desired value */
+.carousel-item img {
+    height: 400px; 
+    object-fit: cover; /* This ensures the image covers the entire container */
+}
