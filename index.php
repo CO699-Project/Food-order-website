@@ -150,7 +150,74 @@
       </div>
   </div>        
 </section> 
+
 <!-- Food Categories Section Ends Here -->
+
+<!-- Food Menu Section Starts Here -->
+<section class="food-menu">
+  <div class="container-2">
+    <h2 class="text-center">Food Menu</h2>
+      <div class="food-menu-box">
+        <div class="food-menu-img">
+            <img src="images/food_images/kottu_roti.jpg" alt="Kottu Roti" class="img-responsive img-curve">
+        </div>
+        <div class="food-menu-desc">
+          <h4>Kottu Roti</h4>
+          <p class="food-price">RS.800.00</p>
+          <p class="food-detail">
+          “Kottu” made with shredded roti,fresh vegetables, with Sri Lankan Herbs and Spices stir fried on Grill mixed with Egg/Sea food/Chicken/Mutton.
+          </p>
+          <br>
+          <a href="order.html" class="btn btn-primary">Order Now</a>
+        </div>
+      </div>
+      <div class="food-menu-box">
+      <div class="food-menu-img">
+            <img src="images/food_images/nasi_goreng.jpg" alt="Nasi Goreng" class="img-responsive img-curve">
+        </div>
+        <div class="food-menu-desc">
+          <h4>Nasi Goreng</h4>
+          <p class="food-price">RS.1000.00</p>
+          <p class="food-detail">
+          Southeast Asian fried rice dish made with Chicken, Prawns, shredded Vegetables and fried Egg served with Chilli paste
+          </p>
+          <br>
+          <a href="order.html" class="btn btn-primary">Order Now</a>
+        </div>
+      </div>
+      <div class="food-menu-box">
+      <div class="food-menu-img">
+            <img src="images/food_images/chicken_fried_rice.jpg" alt="Chicken Fried Rice" class="img-responsive img-curve">
+        </div>
+        <div class="food-menu-desc">
+          <h4>Chicken Fried Rice</h4>
+          <p class="food-price">RS.900.00</p>
+          <p class="food-detail">
+          Our chicken fried rice is, mixed with Chicken and veggies served with fried egg roast Chicken drumstick and chili paste.
+          </p>
+          <br>
+          <a href="order.html" class="btn btn-primary">Order Now</a>
+        </div>
+      </div>
+      <div class="food-menu-box">
+      <div class="food-menu-img">
+            <img src="images/food_images/devilled_mutton.jpg" alt="Devilled Mutton" class="img-responsive img-curve">
+        </div>
+        <div class="food-menu-desc">
+          <h4>Devilled Mutton</h4>
+          <p class="food-price">RS.1000.00</p>
+          <p class="food-detail">
+          Marinated and fried Meat or Sea food with stir-fried onion and mixed Bell peppers, tossed in a tomato based sweet and spicy sauce
+          </p>
+          <br>
+          <a href="order.html" class="btn btn-primary">Order Now</a>
+        </div>
+      </div>
+      <div class="clearmargin">       
+      </div>
+  </div>        
+</section> 
+<!-- Food Menu Section Ends Here -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
