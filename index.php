@@ -55,5 +55,30 @@
     
   </nav>
   
+  <!-- Navbar Section End Here -->
+
+ <!-- Food Search Section Starts Here -->
+ <section class="food-search text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <form>
+          <div class="p-1 bg-light shadow-sm">
+            <div class="input-group">
+              <input type="search" name="search" placeholder="Search for Food.." required class="form-control">
+              <div class="input-group-append">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-outline-secondary" data-toggle="true" aria-expanded="false">
+                    Search
+                  </button>
+                </div>
+              </div>              
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ </section>
 </body>
 </html>
