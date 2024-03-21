@@ -1,0 +1,101 @@
+/* 
+    Author:Sudath Nawagamuwage;
+    Theme: Spice Ceylon Restaurant;
+    Header Section;
+*/
+
+.container-2{
+    /* border:1px solid red; */
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;       
+}
+
+.text-center{
+    text-align: center;
+}
+h2{
+    color:#2f3542 ;
+    font-size: 2rem;
+    margin-bottom:2% ;
+}
+/* CSS for Categories */
+.categories{
+    padding: 4% 0;
+}
+.box-3{
+    /* border: 1px solid black; */
+    width: 28%;
+    float: left;
+    margin: 1%;
+}
+.clearmargin{
+    clear: both;
+    float: none;
+}
+.img-responsive{
+    width: 100%;
+}
+.float-container{
+    position: relative;
+}
+.float-text{
+    position: absolute;
+    bottom: 50px;
+    left: 40%; 
+} 
+.text-white{
+    color: white;
+}
+h3{
+    font-size: 1.5rem;
+}
+.img-curve{
+    border-radius: 15px;
+}
+
+/* CSS for Food Menu */
+
+.food-menu{
+    background-color: #ececec;
+    padding: 4% 0;
+}
+
+.food-menu-box{
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.food-menu-img{
+    width: 20%;
+    float: left;
+}
+
+.food-menu-desc{
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+
+.food-price{
+    font-size: 1.2rem;
+    margin: 2% 0;
+}
+.food-detail{
+    font-size: 1rem;
+    color: #747d8c;
+}
+
+/* CSS for Social */
+
+.social ul{
+    list-style-type: none;
+}
+.social ul li{
+    display: inline;
+    padding: 1%;
+}
