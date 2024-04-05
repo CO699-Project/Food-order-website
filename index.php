@@ -31,7 +31,7 @@
             <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Foods</a>
+            <a class="nav-link" href="foods.php">Foods</a>
           </li>
         </ul>
         <ul class="navbar-nav ms-auto">
@@ -42,7 +42,7 @@
             <a class="nav-link" href="#"><i class="email fa fa-envelope-o"></i>spiceceylon@yahoo.com</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Menu</a>
+            <a class="nav-link" href="menu.php">Menu</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" id="login">Log In</a>
@@ -120,7 +120,7 @@
 <!-- Food Categories Section Starts Here -->
 <section class="categories">
   <div class="container-2">
-      <h2 class="text-center">Categories</h2>
+      <h2 class="text-center">Foods</h2>
 
       <a href="#">  
       <div class="box-3 float-container" >
