@@ -7,7 +7,7 @@
             <br /><br /><br />
 
                 <!-- Button to Add Category -->
-                <a href="#" class="btn-primary">Add Category</a>
+                <a href="add-category.php" class="btn-primary">Add Category</a>
 
                 <br /><br /><br />
 
