@@ -7,17 +7,46 @@
     
     <body>
         <!-- Menu Section Starts -->
-        <div class="menu">
+        <div class="menu text-center">
             <div class ="wrapper">
-                Menu
+            <ul>
+                <li><a href="index.php">Dashboard</a></li>
+                <li><a href="manage-category.php">Category</a></li>
+                <li><a href="manage-food.php">Food Items</a></li>
+                <li><a href="manage-order.php">Order Section</a></li>
+                <li><a href="manage-admin.php">Manage Admin</a></li>
+                <li><a href="logout.php">Logout</a></li>
+                </ul>
             </div>            
         </div>
         <!-- Menu Section Ends -->
 
         <!-- main Content Section Starts -->
-        <div class="main content">
+        <div class="main-content">
             <div class ="wrapper">
-                content
+                <h1>Administrator Dashboard</h1>
+                <br><br>                 
+                        <div class="col-4 text-center">
+                            <h1>5</h1>
+                            <br/>
+                            categories
+                        </div>
+                        <div class="col-4 text-center">
+                            <h1>5</h1>
+                            <br/>
+                            categories
+                        </div>
+                        <div class="col-4 text-center">
+                            <h1>5</h1>
+                            <br/>
+                            categories
+                        </div>
+                        <div class="col-4 text-center">
+                            <h1>5</h1>
+                            <br/>
+                            categories
+                        </div>
+                        <div class="clearfix"></div>
             </div>           
         </div>
         <!-- Menu Content Section End -->
@@ -29,6 +58,5 @@
             </div>           
         </div>
         <!-- Footer Section Ends -->
-
     </body>
 </html>
