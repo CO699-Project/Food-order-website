@@ -4,6 +4,14 @@
         <div class="main-content">
             <div class ="wrapper">
                 <h1>Administrator Dashboard</h1>
+
+                <br /><br />
+
+                <!-- Button to Add Admin -->
+                <a href="#" class="btn-primary">Add Admin</a>
+
+                <br /><br /><br />
+
                 <table class="tbl-full">
                     <tr>
                         <th>S.N.</th>
