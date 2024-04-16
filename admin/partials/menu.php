@@ -1,3 +1,10 @@
+<?php
+
+include('../config/dbconnect.php'); 
+
+
+?>
+
 <html>
     <head>
         <title>Online Food Order</title>
