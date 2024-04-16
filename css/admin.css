@@ -19,3 +19,9 @@
   .text-center {
     text-align: center;
   }
+
+  /* CSS for Footer */
+.footer {
+    background-color: #40739e;
+    color: white;
+  }
