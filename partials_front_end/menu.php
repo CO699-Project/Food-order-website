@@ -1,3 +1,5 @@
+<?php include('../config/dbconnect.php'); ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -25,13 +27,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="index.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="foods.html">Foods</a>
+            <a class="nav-link" href="foods.php">Foods</a>
           </li>
         </ul>
         <ul class="navbar-nav ms-auto">
@@ -42,7 +44,7 @@
             <a class="nav-link" href="#"><i class="email fa fa-envelope-o"></i>spiceceylon@yahoo.com</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="menu.html">Menu</a>
+            <a class="nav-link" href="menu.php">Menu</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" id="login">Log In</a>
