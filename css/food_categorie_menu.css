@@ -33,9 +33,12 @@ h2{
     clear: both;
     float: none;
 }
-.img-responsive{
+.img-responsive {
     width: 100%;
 }
+  .img-curve {
+    border-radius: 15px;
+  }
 .float-container{
     position: relative;
 }
@@ -123,6 +126,14 @@ h3{
     background-position: center;
     padding: 7% 0;
 }
+.order-2{
+    /* background-image: url(../images/banner/curry_pots.jpg); */
+    background-color: aliceblue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
+}
 
 fieldset {
     border: 1px solid white;
@@ -140,3 +151,25 @@ fieldset {
     margin-bottom: 1%; 
     font-weight: bold;
 }
+/* registaion */
+
+.order-2{
+    /* background-image: url(../images/banner/curry_pots.jpg); */
+    background-color:#747d8c;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
+}
+
+.registration {
+    border: 2px solid black; /* Adding border */
+     width: 20%;
+    margin: 10% auto;
+    padding: 2%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+

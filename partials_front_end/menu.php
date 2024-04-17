@@ -27,13 +27,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link" href="<?php echo SITEURL; ?>">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="foods.php">Foods</a>
+            <a class="nav-link" href="<?php echo SITEURL; ?>foods.php">Foods</a>
           </li>
         </ul>
         <ul class="navbar-nav ms-auto">
@@ -44,13 +44,13 @@
             <a class="nav-link" href="#"><i class="email fa fa-envelope-o"></i>spiceceylon@yahoo.com</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="menu.php">Menu</a>
+            <a class="nav-link" href="<?php echo SITEURL; ?>menu.php">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="login">Log In</a>
+            <a class="nav-link" href="<?php echo SITEURL; ?>login.php">Log In</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="#" id="signup">Sign up</a>
+            <a class="nav-link" href="<?php echo SITEURL; ?>registration.php">Sign up</a>
           </li>  
         </ul>
       </div>

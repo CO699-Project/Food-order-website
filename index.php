@@ -1,21 +1,23 @@
 <?php include('partials_front_end/menu.php')?>
 
  <!-- Food Search Section Starts Here -->
+ 
  <section class="food-search text-center">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 mx-auto">
-        <form>
+        <form action=" <?php echo SITEURL; ?>menu-search.php" method="POST">>
           <div class="p-1 bg-light shadow-sm">
             <div class="input-group">
               <input type="search" name="search" placeholder="Search for Food.." required class="form-control">
-              <div class="input-group-append">
+              <input type="submit" name="submit" value="Search" class="btn btn-primary">
+              <!-- <div class="input-group-append">
                 <div class="btn-group">
                   <button type="button" class="btn btn-outline-secondary" data-toggle="true" aria-expanded="false">
                     Search
                   </button>
                 </div>
-              </div>              
+              </div>               -->
             </div>
           </div>
         </form>
@@ -25,6 +27,14 @@
  </section>
 
  <!-- Food Search Section End Here -->
+
+ <?php 
+        if(isset($_SESSION['order']))
+        {
+            echo $_SESSION['order'];
+            unset($_SESSION['order']);
+        }
+    ?>
 
  <!-- Carousel Slider Start Here -->
 
@@ -84,7 +94,7 @@
                         $image_name = $row['image_name'];
                         ?>
                         
-                        <a href="<?php echo SITEURL; ?>category-foods.php?category_id=<?php echo $id; ?>">
+                        <a href="<?php echo SITEURL; ?>foods-menu.php?category_id=<?php echo $id; ?>">
                             <div class="box-3 float-container">
                                 <?php 
                                     //Check whether Image is available or not
@@ -193,62 +203,7 @@
                     echo "<div class='error'>Food not found.</div>";
                 }
             ?>
-      <!-- <div class="food-menu-box">
-        <div class="food-menu-img">
-            <img src="images/food_images/kottu_roti.jpg" alt="Kottu Roti" class="img-responsive img-curve">
-        </div>
-        <div class="food-menu-desc">
-          <h4>Kottu Roti</h4>
-          <p class="food-price">RS.800.00</p>
-          <p class="food-detail">
-          “Kottu” made with shredded roti,fresh vegetables, with Sri Lankan Herbs and Spices stir fried on Grill mixed with.
-          </p>
-          <br>
-          <a href="order.html" class="btn btn-primary">Order Now</a>
-        </div>
-      </div>
-      <div class="food-menu-box">
-      <div class="food-menu-img">
-            <img src="images/food_images/nasi_goreng.jpg" alt="Nasi Goreng" class="img-responsive img-curve">
-        </div>
-        <div class="food-menu-desc">
-          <h4>Nasi Goreng</h4>
-          <p class="food-price">RS.1000.00</p>
-          <p class="food-detail">
-          Southeast Asian fried rice dish made with Chicken, Prawns, shredded Vegetables and fried Egg served with Chilli paste
-          </p>
-          <br>
-          <a href="order.html" class="btn btn-primary">Order Now</a>
-        </div>
-      </div>
-      <div class="food-menu-box">
-      <div class="food-menu-img">
-            <img src="images/food_images/chicken_fried_rice.jpg" alt="Chicken Fried Rice" class="img-responsive img-curve">
-        </div>
-        <div class="food-menu-desc">
-          <h4>Chicken Fried Rice</h4>
-          <p class="food-price">RS.900.00</p>
-          <p class="food-detail">
-          Our chicken fried rice is, mixed with Chicken and veggies served with fried egg roast Chicken drumstick and chili paste.
-          </p>
-          <br>
-          <a href="order.html" class="btn btn-primary">Order Now</a>
-        </div>
-      </div> -->
-      <!-- <div class="food-menu-box">
-      <div class="food-menu-img">
-            <img src="images/food_images/devilled_mutton.jpg" alt="Devilled Mutton" class="img-responsive img-curve">
-        </div>
-        <div class="food-menu-desc">
-          <h4>Devilled Mutton</h4>
-          <p class="food-price">RS.1000.00</p>
-          <p class="food-detail">
-          Marinated and fried Meat or Sea food with stir-fried onion and mixed Bell peppers, tossed in a tomato based sweet and spicy sauce
-          </p>
-          <br>
-          <a href="order.html" class="btn btn-primary">Order Now</a>
-        </div>
-      </div> -->
+     
       <div class="clearmargin">       
       </div>
   </div>        
