@@ -174,7 +174,7 @@
                         $image_name = "Food-Name-".rand(0000,9999).".".$ext; //New Image Name May Be "Food-Name-657.jpg"
 
                         //B. Upload the Image
-                        //Get the Src Path and DEstinaton path
+                        //Get the Src Path and Destinaton path
 
                         // Source path is the current location of the image
                         $src = $_FILES['image']['tmp_name'];
