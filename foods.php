@@ -64,31 +64,64 @@
 <section class="categories">
   <div class="container-2">
       <h2 class="text-center">Foods</h2>
+      
+      <?php 
 
-      <a href="#">  
-      <div class="box-3 float-container" >
-         <img src="images/food_images/kottu_roti.jpg" alt="Kottu Roti" class="img-responsive img-curve">
+                //Display all the cateories that are active
+                //Sql Query
+                $sql = "SELECT * FROM category WHERE active='Yes'";
 
-         <h3 class="float-text text-white">Kottu Roti</h3>
-      </div>
-      </a>
+                //Execute the Query
+                $res = mysqli_query($conn, $sql);
 
-      <a href="#">
-      <div class="box-3 float-container">
-          <img src="images/food_images/nasi_goreng.jpg" alt="Nasi Goreng" class="img-responsive img-curve">
-         
-         <h3 class="float-text text-white">Nasi Goreng</h3>
-      </div>
-      </a>
+                //Count Rows
+                $count = mysqli_num_rows($res);
 
-      <a href="#">
-      <div class="box-3 float-container">
-      <img src="images/food_images/chicken_fried_rice.jpg" alt="Chicken Fried Rice" class="img-responsive img-curve">
-         
-         <h3 class="float-text text-white">Chicken Fried Rice</h3>
-      </div>
-      </a>
+                //CHeck whether categories available or not
+                if($count>0)
+                {
+                    //CAtegories Available
+                    while($row=mysqli_fetch_assoc($res))
+                    {
+                        //Get the Values
+                        $id = $row['id'];
+                        $title = $row['title'];
+                        $image_name = $row['image_name'];
+                        ?>
+                        
+                        <a href="<?php echo SITEURL; ?>category-foods.php?category_id=<?php echo $id; ?>">
+                            <div class="box-3 float-container">
+                                <?php 
+                                    if($image_name=="")
+                                    {
+                                        //Image not Available
+                                        echo "<div class='error'>Image not found.</div>";
+                                    }
+                                    else
+                                    {
+                                        //Image Available
+                                        ?>
+                                        <img src="<?php echo SITEURL; ?>images/food_images/<?php echo $image_name; ?>" alt="Pizza" class="img-responsive img-curve">
+                                        <?php
+                                    }
+                                ?>
+                                
 
+                                <h3 class="float-text text-white"><?php echo $title; ?></h3>
+                            </div>
+                        </a>
+
+                        <?php
+                    }
+                }
+                else
+                {
+                    //CAtegories Not Available
+                    echo "<div class='error'>Category not found.</div>";
+                }
+            
+            ?>
+      
       <div class="clearmargin">       
       </div>
   </div>        
