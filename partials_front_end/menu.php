@@ -1,4 +1,4 @@
-<?php include('../config/dbconnect.php'); ?>
+<?php include('config/dbconnect.php'); ?>
 
 <!doctype html>
 <html lang="en">

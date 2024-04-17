@@ -65,30 +65,57 @@
   <div class="container-2">
       <h2 class="text-center">Foods</h2>
 
-      <a href="#">  
-      <div class="box-3 float-container" >
-         <img src="images/food_images/kottu_roti.jpg" alt="Kottu Roti" class="img-responsive img-curve">
+      <?php 
+                //Create SQL Query to Display CAtegories from Database
+                $sql = "SELECT * FROM category WHERE active='Yes' AND featured='Yes' ORDER BY id DESC LIMIT 3";
+                //Execute the Query
+                $res = mysqli_query($conn, $sql);
+                //Count rows to check whether the category is available or not
+                $count = mysqli_num_rows($res);
 
-         <h3 class="float-text text-white">Kottu Roti</h3>
-      </div>
-      </a>
+                if($count>0)
+                {
+                    //CAtegories Available
+                    while($row=mysqli_fetch_assoc($res))
+                    {
+                        //Get the Values like id, title, image_name
+                        $id = $row['id'];
+                        $title = $row['title'];
+                        $image_name = $row['image_name'];
+                        ?>
+                        
+                        <a href="<?php echo SITEURL; ?>category-foods.php?category_id=<?php echo $id; ?>">
+                            <div class="box-3 float-container">
+                                <?php 
+                                    //Check whether Image is available or not
+                                    if($image_name=="")
+                                    {
+                                        //Display MEssage
+                                        echo "<div class='error'>Image not Available</div>";
+                                    }
+                                    else
+                                    {
+                                        //Image Available
+                                        ?>
+                                        <img src="<?php echo SITEURL; ?>images/food_images/<?php echo $image_name; ?>" alt="Pizza" class="img-responsive img-curve">
+                                        <?php
+                                    }
+                                ?>
+                                
 
-      <a href="#">
-      <div class="box-3 float-container">
-          <img src="images/food_images/nasi_goreng.jpg" alt="Nasi Goreng" class="img-responsive img-curve">
-         
-         <h3 class="float-text text-white">Nasi Goreng</h3>
-      </div>
-      </a>
+                                <h3 class="float-text text-white" ><?php echo $title; ?></mark></h3>
+                            </div>
+                        </a>
 
-      <a href="#">
-      <div class="box-3 float-container">
-      <img src="images/food_images/chicken_fried_rice.jpg" alt="Chicken Fried Rice" class="img-responsive img-curve">
-         
-         <h3 class="float-text text-white">Chicken Fried Rice</h3>
-      </div>
-      </a>
-
+                        <?php
+                    }
+                }
+                else
+                {
+                    //Categories not Available
+                    echo "<div class='error'>Category not Added.</div>";
+                }
+            ?>
       <div class="clearmargin">       
       </div>
   </div>        
