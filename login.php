@@ -59,11 +59,12 @@
 </button>
 </div>
 <!-- Carousel Slider End Here -->
-        
-        <div class="login">
+
+<section class="order-2">
+    <!-- <div class="container-2"> -->
+        <div class="registration">
             <h1 class="text-center">User Login</h1>
             <br><br>
-
             <?php 
                 if(isset($_SESSION['login']))
                 {
@@ -77,22 +78,33 @@
                     unset($_SESSION['no-login-message']);
                 }
             ?>
-        
 
             <!-- Login Form Starts Here -->
             <form action="" method="POST" class="text-center">
-            Username: <br>
-            <input type="text" name="username" placeholder="Enter Username"><br><br>
+                <!-- <div class="form-group">
+                    <label for="full_name">Full Name:</label><br>
+                    <input type="text" name="full_name" id="full_name" placeholder="Enter Full Name">
+                </div><br> -->
 
-            Password: <br>
-            <input type="password" name="password" placeholder="Enter Password"><br><br>
+                <div class="form-group">
+                    <label for="username">Username:</label><br>
+                    <input type="text" name="username" id="username" placeholder="Enter Username">
+                </div><br>
 
-            <input type="submit" name="submit" value="Login" class="btn-primary">
-            <br><br>
+                <div class="form-group">
+                    <label for="password">Password:</label><br>
+                    <input type="password" name="password" id="password" placeholder="Enter Password">
+                </div><br>
+
+                <input type="submit" name="submit" value="Register" class="btn btn-primary">
             </form>
-            <!-- Login Form Ends Here -->
-
             
+        </div>
+    </div>
+</section>
+<!-- Login Form Ends Here -->     
+        
+
         </div>
 
     </body>
@@ -116,23 +128,24 @@
 
         //4. COunt rows to check whether the user exists or not
         $count = mysqli_num_rows($res);
+        
+         if($count==1)
+        // {
+        //     //User AVailable and Login Success
+        //     $_SESSION['login'] = "<div class='success'>Login Successful.</div>";
+        //     $_SESSION['user'] = $username; //TO check whether the user is logged in or not and logout will unset it
 
-        if($count==1)
-        {
-            //User AVailable and Login Success
-            $_SESSION['login'] = "<div class='success'>Login Successful.</div>";
-            $_SESSION['user'] = $username; //TO check whether the user is logged in or not and logout will unset it
-
-            //REdirect to HOoe Page/Dashboard
-            header('location:'.SITEURL.'Food-order-website/');
-        }
-        else
-        {
-            //User not Available and Login Fail
-            $_SESSION['login'] = "<div class='error text-center'>Username or Password did not match.</div>";
-            //Redirect to Home Page/Dashboard
-            header('location:'.SITEURL.'Food-order-website/login.php');
-        }
+        //     //REdirect to HOoe Page/Dashboard
+            header('location:'.SITEURL);
+            // header('location:'.SITEURL.'Food-order-website/');
+        // }
+        // else
+        // {
+        //     //User not Available and Login Fail
+        //     $_SESSION['login'] = "<div class='error text-center'>Username or Password did not match.</div>";
+        //     //Redirect to Home Page/Dashboard
+        //     header('location:'.SITEURL.'Food-order-website/login.php');
+        // }
 
 
     }

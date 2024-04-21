@@ -120,7 +120,7 @@ h3{
     font-size: 1rem;
 }
 .order-1{
-    background-image: url(../images/banner/curry_pots.jpg);
+    background-image: url(../images/banner/Bg1jpg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -136,14 +136,14 @@ h3{
 }
 
 fieldset {
-    border: 1px solid white;
+    border: 1px solid black;
     margin: 5%;
     padding: 3%;
     border-radius: 5px;
   }
   
   legend {
-    background-color: gray;
+    background-color:cadetblue;
     color: white;
     padding: 5px 10px;
   }
@@ -155,7 +155,7 @@ fieldset {
 
 .order-2{
     /* background-image: url(../images/banner/curry_pots.jpg); */
-    background-color:#747d8c;
+    background-color:aliceblue;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -164,7 +164,8 @@ fieldset {
 
 .registration {
     border: 2px solid black; /* Adding border */
-     width: 20%;
+    background-color:#747d8c;
+    width: 20%;
     margin: 10% auto;
     padding: 2%;
 }
