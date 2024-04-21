@@ -30,10 +30,10 @@
             <a class="nav-link" href="<?php echo SITEURL; ?>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo SITEURL; ?>foods.php">Foods</a>
+            <a class="nav-link" href="<?php echo SITEURL; ?>foods.php">Food Selection</a>
           </li>
         </ul>
         <ul class="navbar-nav ms-auto">
@@ -44,13 +44,13 @@
             <a class="nav-link" href="#"><i class="email fa fa-envelope-o"></i>spiceceylon@yahoo.com</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo SITEURL; ?>menu.php">Menu</a>
+            <a class="nav-link" href="<?php echo SITEURL; ?>menu.php">Food Menu</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo SITEURL; ?>login.php">Log In</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="<?php echo SITEURL; ?>registration.php">Sign up</a>
+            <a class="nav-link" href="<?php echo SITEURL; ?>registration.php">Sign Up</a>
           </li>  
         </ul>
       </div>
