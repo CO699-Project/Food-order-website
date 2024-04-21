@@ -1,3 +1,9 @@
+<!-- 
+    Author:Sudath Nawagamuwage;
+    Theme: Spice Ceylon Restaurant;
+    Date:15/01/2024    
+-->
+
 <?php include('partials_front_end/menu.php')?>
 
 <?php 
@@ -7,17 +13,20 @@ if(isset($_GET['food_id']))
     //Get the Food id and details of the selected food
     $food_id = $_GET['food_id'];
 
-    //Get the DEtails of the SElected Food
+    //Get the DEtails of the Selected Food
     $sql = "SELECT * FROM food WHERE id=$food_id";
+
     //Execute the Query
     $res = mysqli_query($conn, $sql);
+
     //Count the rows
     $count = mysqli_num_rows($res);
+
     //CHeck whether the data is available or not
     if($count==1)
     {
-        //WE Have Data
-        //GEt the Data from Database
+       
+        //Get the Data from Database
         $row = mysqli_fetch_assoc($res);
 
         $title = $row['title'];
@@ -26,8 +35,8 @@ if(isset($_GET['food_id']))
     }
     else
     {
-        //Food not Availabe
-        //REdirect to Home Page
+        
+        //Redirect to Home Page
         header('location:'.SITEURL);
     }
 }
@@ -89,7 +98,7 @@ else
                     {
                         //Image is Available
                         ?>
-                        <img src="<?php echo SITEURL; ?>images/food_images/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                        <img src="<?php echo SITEURL; ?>images/food_images/<?php echo $image_name; ?>" alt="" class="img-responsive img-curve">
                         <?php
                     }
                     ?>
@@ -106,11 +115,11 @@ else
             <fieldset>
                 <legend>Delivery Details</legend>
                 <div class="order-label">Full Name</div>
-                <input type="text" name="full-name" placeholder="E.g. William Moore" class="input-responsive" required>
+                <input type="text" name="full-name" placeholder="E.g. Sumudu Karunarathna" class="input-responsive" required>
                 <div class="order-label">Phone Number</div>
-                <input type="tel" name="contact" placeholder="E.g. 7410000000" class="input-responsive" required>
+                <input type="tel" name="contact" placeholder="E.g. 74100562536" class="input-responsive" required>
                 <div class="order-label">Email</div>
-                <input type="email" name="email" placeholder="E.g. william@codeastro.com" class="input-responsive" required>
+                <input type="email" name="email" placeholder="E.g. info@spiceceylon.lk" class="input-responsive" required>
                 <div class="order-label">Address</div>
                 <textarea name="address" rows="10" placeholder="E.g. Street, City, Country" class="input-responsive" required></textarea>
                 <input type="submit" name="submit" value="Confirm Order" class="btn btn-primary">
@@ -146,21 +155,7 @@ else
             customer_address = '$customer_address'";
             //Execute the Query
             $res2 = mysqli_query($conn, $sql2);
-            //Check whether query executed successfully or not
-        //     if($res2==true)
-        //     {
-        //         //Query Executed and Order Saved
-        //         $_SESSION['order'] = "<div class='success text-center'>Food Ordered Successfully.</div>";
-        //         header('location:'.SITEURL);
-        //     }
-        //     else
-        //     {
-        //         //Failed to Save Order
-        //     $_SESSION['order'] = "<div class='error text-center'>Failed to Order Food.</div>";
-        //     header('location:'.SITEURL);
-        // }
-
-    }
+        }
 
 ?>   
 

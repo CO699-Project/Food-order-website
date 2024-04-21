@@ -1,3 +1,9 @@
+<!-- 
+    Author:Sudath Nawagamuwage;
+    Theme: Spice Ceylon Restaurant;
+    Date:15/01/2024    
+->
+
 <!-- Social Section Starts Here -->
 <section class="social">
         <div class="container text-center">

@@ -1,3 +1,8 @@
+<!-- 
+    Author:Sudath Nawagamuwage;
+    Theme: Spice Ceylon Restaurant;
+    Date:15/01/2024    
+-->
 <?php include('partials_front_end/menu.php')?>
 
 
@@ -61,8 +66,7 @@
 <!-- Carousel Slider End Here -->
 
 <section class="order-2">
-    <!-- <div class="container-2"> -->
-        <div class="registration">
+         <div class="registration">
             <h1 class="text-center">User Login</h1>
             <br><br>
             <?php 
@@ -81,12 +85,7 @@
 
             <!-- Login Form Starts Here -->
             <form action="" method="POST" class="text-center">
-                <!-- <div class="form-group">
-                    <label for="full_name">Full Name:</label><br>
-                    <input type="text" name="full_name" id="full_name" placeholder="Enter Full Name">
-                </div><br> -->
-
-                <div class="form-group">
+                 <div class="form-group">
                     <label for="username">Username:</label><br>
                     <input type="text" name="username" id="username" placeholder="Enter Username">
                 </div><br>
@@ -128,26 +127,12 @@
 
         //4. COunt rows to check whether the user exists or not
         $count = mysqli_num_rows($res);
+
+        $_SESSION['login'] = "<div class='success'>Login Successful.</div>";
+        $_SESSION['user'] = $username; 
         
-         if($count==1)
-        // {
-        //     //User AVailable and Login Success
-        //     $_SESSION['login'] = "<div class='success'>Login Successful.</div>";
-        //     $_SESSION['user'] = $username; //TO check whether the user is logged in or not and logout will unset it
-
-        //     //REdirect to HOoe Page/Dashboard
-            header('location:'.SITEURL);
-            // header('location:'.SITEURL.'Food-order-website/');
-        // }
-        // else
-        // {
-        //     //User not Available and Login Fail
-        //     $_SESSION['login'] = "<div class='error text-center'>Username or Password did not match.</div>";
-        //     //Redirect to Home Page/Dashboard
-        //     header('location:'.SITEURL.'Food-order-website/login.php');
-        // }
-
-
+        header('location: index.php');        
+      
     }
 
 ?> 

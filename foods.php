@@ -1,3 +1,8 @@
+<!-- 
+    Author:Sudath Nawagamuwage;
+    Theme: Spice Ceylon Restaurant;
+    Date:15/01/2024    
+-->
 <?php include('partials_front_end/menu.php')?>
 
  <!-- Food Search Section Starts Here -->
@@ -5,17 +10,11 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 mx-auto">
-        <form>
+        <form action=" <?php echo SITEURL; ?>menu-search.php" method="POST">>
           <div class="p-1 bg-light shadow-sm">
             <div class="input-group">
               <input type="search" name="search" placeholder="Search for Food.." required class="form-control">
-              <div class="input-group-append">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-outline-secondary" data-toggle="true" aria-expanded="false">
-                    Search
-                  </button>
-                </div>
-              </div>              
+              <input type="submit" name="submit" value="Search" class="btn btn-primary">
             </div>
           </div>
         </form>
@@ -23,11 +22,9 @@
     </div>
   </div>
  </section>
-
- <!-- Food Search Section End Here -->
+<!-- Food Search Section End Here -->
 
  <!-- Carousel Slider Start Here -->
-
 <div id="carouseldemo" class="carousel slide" data-bs-ride="carousel">
 
   <!-- Indicators/dots -->
@@ -68,7 +65,7 @@
       <?php 
 
                 //Display all the cateories that are active
-                //Sql Query
+                
                 $sql = "SELECT * FROM category WHERE active='Yes'";
 
                 //Execute the Query
@@ -80,7 +77,7 @@
                 //CHeck whether categories available or not
                 if($count>0)
                 {
-                    //CAtegories Available
+                    //Categories Available
                     while($row=mysqli_fetch_assoc($res))
                     {
                         //Get the Values

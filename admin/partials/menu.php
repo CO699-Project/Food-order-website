@@ -1,3 +1,8 @@
+<!-- 
+    Author:Sudath Nawagamuwage;
+    Theme: Spice Ceylon Restaurant;
+    Date:15/01/2024    
+-->
 <?php
 
 include('../config/dbconnect.php'); 
@@ -26,4 +31,4 @@ include('../config/dbconnect.php');
                 </ul>
             </div>            
         </div>
-        <!-- Menu Section Ends -->
+<!-- Menu Section Ends -->

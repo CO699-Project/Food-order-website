@@ -1,3 +1,9 @@
+<!-- 
+    Author:Sudath Nawagamuwage;
+    Theme: Spice Ceylon Restaurant;
+    Date:15/01/2024    
+-->
+
 <?php include('partials/menu.php'); ?>
 
 <div class="main-content">
@@ -52,8 +58,7 @@
                         <select name="category">
 
                             <?php 
-                                //Create PHP Code to display categories from Database
-                                //1. CReate SQL to get all active categories from database
+                                //1. Create SQL to get all active categories from database
                                 $sql = "SELECT * FROM category WHERE active='Yes'";
                                 
                                 //Executing qUery
@@ -127,10 +132,7 @@
             //CHeck whether the button is clicked or not
             if(isset($_POST['submit']))
             {
-                //Add the Food in Database
-                //echo "Clicked";
-                
-                //1. Get the DAta from Form
+                //Get the Data from Form
                 $title = $_POST['title'];
                 $description = $_POST['description'];
                 $price = $_POST['price'];
@@ -155,7 +157,7 @@
                     $active = "No"; //Setting Default Value
                 }
 
-                //2. Upload the Image if selected
+                
                 //Check whether the select image is clicked or not and upload the image only if the image is selected
                 if(isset($_FILES['image']['name']))
                 {
@@ -165,15 +167,15 @@
                     //Check Whether the Image is Selected or not and upload image only if selected
                     if($image_name!="")
                     {
-                        // Image is SElected
-                        //A. REnamge the Image
+                       
+                       
                         //Get the extension of selected image (jpg, png, gif, etc.)
                         $ext = end(explode('.', $image_name));
 
                         // Create New Name for Image
                         $image_name = "Food-Name-".rand(0000,9999).".".$ext; //New Image Name May Be "Food-Name-657.jpg"
 
-                        //B. Upload the Image
+                       
                         //Get the Src Path and Destinaton path
 
                         // Source path is the current location of the image
@@ -188,8 +190,8 @@
                         //check whether image uploaded of not
                         if($upload==false)
                         {
-                            //Failed to Upload the image
-                            //REdirect to Add Food Page with Error Message
+                            
+                            //Redirect to Add Food Page with Error Message
                             $_SESSION['upload'] = "<div class='error'>Failed to Upload Image.</div>";
                             header('location:'.SITEURL.'admin/add-food.php');
                             //STop the process
@@ -204,9 +206,6 @@
                     $image_name = ""; //SEtting DEfault Value as blank
                 }
 
-                //3. Insert Into Database
-
-                //Create a SQL Query to Save or Add food
                 // For Numerical we do not need to pass value inside quotes '' But for string value it is compulsory to add quotes ''
                 $sql2 = "INSERT INTO food SET 
                     title = '$title',
@@ -221,8 +220,8 @@
                 //Execute the Query
                 $res2 = mysqli_query($conn, $sql2);
 
-                //CHeck whether data inserted or not
-                //4. Redirect with MEssage to Manage Food page
+                
+                //Redirect with MEssage to Manage Food page
                 if($res2 == true)
                 {
                     //Data inserted Successfullly

@@ -1,7 +1,12 @@
+<!-- 
+    Author:Sudath Nawagamuwage;
+    Theme: Spice Ceylon Restaurant;
+    Date:15/01/2024    
+-->
+
 <?php include('partials_front_end/menu.php')?>
 
- <!-- Food Search Section Starts Here -->
- 
+ <!-- Food Search Section Starts Here --> 
  <section class="food-search text-center">
   <div class="container">
     <div class="row">
@@ -11,14 +16,7 @@
             <div class="input-group">
               <input type="search" name="search" placeholder="Search for Food.." required class="form-control">
               <input type="submit" name="submit" value="Search" class="btn btn-primary">
-              <!-- <div class="input-group-append">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-outline-secondary" data-toggle="true" aria-expanded="false">
-                    Search
-                  </button>
-                </div>
-              </div>               -->
-            </div>
+             </div>
           </div>
         </form>
       </div>
@@ -27,7 +25,6 @@
  </section>
 
  <!-- Food Search Section End Here -->
-
  <?php 
         if(isset($_SESSION['order']))
         {
@@ -37,7 +34,6 @@
     ?>
 
  <!-- Carousel Slider Start Here -->
-
 <div id="carouseldemo" class="carousel slide" data-bs-ride="carousel">
 
   <!-- Indicators/dots -->
@@ -76,16 +72,18 @@
       <h2 class="text-center">Foods</h2>
 
       <?php 
-                //Create SQL Query to Display CAtegories from Database
+                //Create SQL Query to Display Categories from Database
                 $sql = "SELECT * FROM category WHERE active='Yes' AND featured='Yes' ORDER BY id DESC LIMIT 3";
+                
                 //Execute the Query
                 $res = mysqli_query($conn, $sql);
+
                 //Count rows to check whether the category is available or not
                 $count = mysqli_num_rows($res);
 
                 if($count>0)
                 {
-                    //CAtegories Available
+                    //Categories Available
                     while($row=mysqli_fetch_assoc($res))
                     {
                         //Get the Values like id, title, image_name
@@ -129,8 +127,7 @@
       <div class="clearmargin">       
       </div>
   </div>        
-</section> 
-
+</section>
 <!-- Food Categories Section Ends Here -->
 
 <!-- Food Menu Section Starts Here -->

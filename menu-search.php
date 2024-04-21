@@ -1,26 +1,25 @@
+<!-- 
+    Author:Sudath Nawagamuwage;
+    Theme: Spice Ceylon Restaurant;
+    Date:15/01/2024    
+-->
+
 <?php include('partials_front_end/menu.php')?>
 
  <!-- Food Search Section Starts Here -->
- <section class="food-search text-center">
-  
-  <div class="container">
-            <?php 
+ <section class="food-search text-center">  
+        <div class="container">
+              <?php 
 
-                //Get the Search Keyword
-                $search = $_POST['search'];
-            
-            ?>
-
-
-            <!-- <h2><a href="#" class="text-white">Foods on Your Search "<?php echo $search; ?>"</a></h2> -->
-
-  </div>
+                  //Get the Search Keyword
+                  $search = $_POST['search'];
+              
+              ?>
+          </div>
  </section>
-
  <!-- Food Search Section End Here -->
 
  <!-- Carousel Slider Start Here -->
-
 <div id="carouseldemo" class="carousel slide" data-bs-ride="carousel">
 
   <!-- Indicators/dots -->

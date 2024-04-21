@@ -1,3 +1,9 @@
+<!-- 
+    Author:Sudath Nawagamuwage;
+    Theme: Spice Ceylon Restaurant;
+    Date:15/01/2024    
+-->
+
 <?php include('partials_front_end/menu.php')?>
 
 <?php 
@@ -6,7 +12,8 @@
         {
             //Category id is set and get the id
             $category_id = $_GET['category_id'];
-            // Get the CAtegory Title Based on Category ID
+
+            // Get the Category Title Based on Category ID
             $sql = "SELECT title FROM category WHERE id=$category_id";
 
             //Execute the Query
@@ -14,12 +21,13 @@
 
             //Get the value from Database
             $row = mysqli_fetch_assoc($res);
+
             //Get the TItle
             $category_title = $row['title'];
         }
         else
         {
-            //CAtegory not passed
+            
             //Redirect to Home page
             header('location:'.SITEURL);
         }
@@ -30,7 +38,6 @@
  
 
  <!-- Carousel Slider Start Here -->
-
 <div id="carouseldemo" class="carousel slide" data-bs-ride="carousel">
 
   <!-- Indicators/dots -->

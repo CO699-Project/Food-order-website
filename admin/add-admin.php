@@ -1,3 +1,9 @@
+<!-- 
+    Author:Sudath Nawagamuwage;
+    Theme: Spice Ceylon Restaurant;
+    Date:15/01/2024    
+-->
+
 <?php include ('partials/menu.php'); ?>
 <div class="main-content">
     <div class="wrapper">
@@ -42,8 +48,6 @@
 <?php include ('partials/footer.php'); ?>
 
 <?php 
-    //Process the Value from Form and Save it in Database
-
     //Check whether the submit button is clicked or not
 
     if(isset($_POST['submit']))
@@ -56,17 +60,17 @@
         $username = $_POST['username'];
         $password = md5($_POST['password']); //Password Encryption with MD5
 
-        //2. SQL Query to Save the data into database
+        //SQL Query to Save the data into database
         $sql = "INSERT INTO admin SET 
             full_name='$full_name',
             username='$username',
             password='$password'
         ";
  
-        //3. Executing Query and Saving Data into Datbase
+        //Executing Query and Saving Data into Datbase
         $res = mysqli_query($conn, $sql) or die(mysqli_error());
 
-        //4. Check whether the (Query is Executed) data is inserted or not and display appropriate message
+        //Check whether the (Query is Executed) data is inserted or not and display appropriate message
         if($res==TRUE)
         {
             //Data Inserted
@@ -78,10 +82,10 @@
         }
         else
         {
-            //FAiled to Insert DAta
-            //echo "Faile to Insert Data";
+            
             //Create a Session Variable to Display Message
             $_SESSION['add'] = "<div class='error'>Failed to Add Admin.</div>";
+            
             //Redirect Page to Add Admin
             header("location:".SITEURL.'admin/add-admin.php');
         }

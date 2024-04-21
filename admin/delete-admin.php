@@ -1,3 +1,8 @@
+<!-- 
+    Author:Sudath Nawagamuwage;
+    Theme: Spice Ceylon Restaurant;
+    Date:15/01/2024    
+-->
 <?php 
 
     //Include constants.php file here
@@ -15,22 +20,19 @@
     // Check whether the query executed successfully or not
     if($res==true)
     {
-        //Query Executed Successully and Admin Deleted
-        //echo "Admin Deleted";
+
         //Create SEssion Variable to Display Message
         $_SESSION['delete'] = "<div class='success'>Admin Deleted Successfully.</div>";
+
         //Redirect to Manage Admin Page
         header('location:'.SITEURL.'admin/manage-admin.php');
     }
     else
     {
-        //Failed to Delete Admin
-        //echo "Failed to Delete Admin";
-
-        $_SESSION['delete'] = "<div class='error'>Failed to Delete Admin. Try Again Later.</div>";
+                $_SESSION['delete'] = "<div class='error'>Failed to Delete Admin. Try Again Later.</div>";
         header('location:'.SITEURL.'admin/manage-admin.php');
     }
 
-    //3. Redirect to Manage Admin page with message (success/error)
+    
 
 ?>

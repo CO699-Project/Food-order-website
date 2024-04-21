@@ -1,6 +1,10 @@
+<!-- 
+    Author:Sudath Nawagamuwage;
+    Theme: Spice Ceylon Restaurant;
+    Date:15/01/2024    
+-->
+
 <?php include('partials_front_end/menu.php')?>
-
-
 
  <!-- Food Search Section Starts Here -->
  <section class="food-search text-center">
@@ -25,11 +29,9 @@
     </div>
   </div>
  </section>
-
  <!-- Food Search Section End Here -->
 
  <!-- Carousel Slider Start Here -->
-
 <div id="carouseldemo" class="carousel slide" data-bs-ride="carousel">
 
   <!-- Indicators/dots -->
@@ -78,6 +80,11 @@
                 </div><br>
 
                 <div class="form-group">
+                    <label for="email">Email Address:</label><br>
+                    <input type="text" name="email" id="email" placeholder="Enter Email Address">
+                </div><br>
+
+                <div class="form-group">
                     <label for="username">Username:</label><br>
                     <input type="text" name="username" id="username" placeholder="Enter Username">
                 </div><br>
@@ -95,62 +102,34 @@
 </section>
 
 
-<!-- <section class="order-2">
-    <div class="container-2">
-        <div class="registration">
-            <h1 class="text-center">User Registration</h1>
-            <br><br>        
-          
-            <form action="" method="post">
-                <div class="row">
-                    <div class="order-label">
-                        <label for="exampleInputEmail1">Full Name</label>
-                        <input class="form-control" type="text" name="full_name" id="example-text-input"> 
-                    </div>
-                    <div class="order-label">
-                        <label for="exampleInputEmail1">Username</label>
-                        <input class="form-control" type="text" name="username" id="example-text-input"> 
-                    </div>
-                    <div class="order-label">
-                        <label for="exampleInputEmail1">Password</label>
-                        <input class="form-control" type="text" name="password" id="example-text-input-2"> 
-                    </div>
-                    
-                <div class="row">
-                    <div class="col-sm-4">
-                        <p> <input type="submit" value="Register" name="submit" class="btn btn-primary"> </p>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</section> -->
 
 <?php include('partials_front_end/footer.php')?>
 
 <?php 
-    //Process the Value from Form and Save it in Database
+    
 
     //Check whether the submit button is clicked or not
-
     if(isset($_POST['submit']))
     {
-        // Button Clicked
-        //echo "Button Clicked";
+        
+       
 
-        //1. Get the Data from form
+        //Get the Data from form
         $full_name = $_POST['full_name'];
+        $email = $_POST['email'];
         $username = $_POST['username'];
         $password = md5($_POST['password']); //Password Encryption with MD5
+        
 
-        //2. SQL Query to Save the data into database
+        //SQL Query to Save the data into database
         $sql = "INSERT INTO users SET 
             full_name='$full_name',
+            email='$email',
             username='$username',
             password='$password'
         ";
  
-        //3. Executing Query and Saving Data into Datbase
+        //Executing Query and Saving Data into Datbase
         $res = mysqli_query($conn, $sql) or die(mysqli_error());
 
         

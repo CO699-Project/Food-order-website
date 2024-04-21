@@ -174,3 +174,35 @@ fieldset {
     margin-bottom: 15px;
 }
 
+/* about us */
+.order-3 {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.order-3 h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.order-3 p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-info h4,
+.opening-hours h4 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-info p,
+.opening-hours p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}

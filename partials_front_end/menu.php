@@ -1,3 +1,9 @@
+<!-- 
+    Author:Sudath Nawagamuwage;
+    Theme: Spice Ceylon Restaurant;
+    Date:15/01/2024     
+  -->
+
 <?php include('config/dbconnect.php'); ?>
 
 <!doctype html>
@@ -30,7 +36,7 @@
             <a class="nav-link" href="<?php echo SITEURL; ?>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="<?php echo SITEURL; ?>about.php">About Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo SITEURL; ?>foods.php">Food Selection</a>
@@ -41,7 +47,7 @@
             <a class="nav-link" href="#"><i class="phone fa fa-phone"></i>+94 2531029</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="email fa fa-envelope-o"></i>spiceceylon@yahoo.com</a>
+            <a class="nav-link" href="#"><i class="email fa fa-envelope-o"></i>info@spiceceylon@.lk</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo SITEURL; ?>menu.php">Food Menu</a>
@@ -56,5 +62,4 @@
       </div>
     
   </nav>
-  
   <!-- Navbar Section End Here -->
