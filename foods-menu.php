@@ -5,6 +5,24 @@
 -->
 
 <?php include('partials_front_end/menu.php')?>
+<!-- Food Search Section Starts Here -->
+<section class="food-search text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <form action=" <?php echo SITEURL; ?>menu-search.php" method="POST">>
+          <div class="p-1 bg-light shadow-sm">
+            <div class="input-group">
+              <input type="search" name="search" placeholder="Search for Food.." required class="form-control">
+              <input type="submit" name="submit" value="Search" class="btn btn-primary">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ </section>
+<!-- Food Search Section End Here -->
 
 <?php 
         //CHeck whether id is passed or not
